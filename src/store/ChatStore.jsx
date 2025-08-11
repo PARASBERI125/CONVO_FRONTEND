@@ -72,7 +72,7 @@ export const useChatStore = create((set, get) => ({
 
   connectSocket: () => {
     const { myself } = get();
-    const socket = io("http://localhost:3000", {
+    const socket = io("https://api.convochat.fun", {
       query: {
         userId: myself.id,
       },
