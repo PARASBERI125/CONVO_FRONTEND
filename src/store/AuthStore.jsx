@@ -20,7 +20,7 @@ const AuthProvider = ({ children }) => {
 
       if (checkuser.status === 200) {
         setisauthenticated(true);
-        console.log(checkuser.data);
+       // console.log(checkuser.data);
         setuser({
           _id: checkuser.data._id,
           contacts: checkuser.data.contacts,
@@ -34,7 +34,7 @@ const AuthProvider = ({ children }) => {
       }
       setloading(false);
     } catch (error) {
-      console.log(error);
+    //  console.log(error);
 
       setisauthenticated(false);
       setloading(false);
