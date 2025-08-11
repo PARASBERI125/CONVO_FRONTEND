@@ -33,7 +33,7 @@ export default function Login() {
       const regUser = await axiosInstance.post("/auth/user/login", formData);
 
       if (regUser.status === 200) {
-        console.log(regUser.data);
+       // console.log(regUser.data);
         toast.success(regUser.data.message);
         setuser({
           _id: regUser.data._id,
@@ -50,7 +50,7 @@ export default function Login() {
         toast.error(regUser.data.message);
       }
     } catch (error) {
-      console.log("Signup error", error);
+      console.log("Login error", error);
       toast.error(
         "Please recheck your credentials,if new user please register"
       );
