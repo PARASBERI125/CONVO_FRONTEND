@@ -25,10 +25,10 @@ const Navbar = () => {
   };
   const navigate = useNavigate();
   return (
-    <div className="navbar bg-primary text-primary-content px-4 sm:px-8 md:px-14">
+    <div className="navbar bg-primary text-primary-content px-3 sm:px-8 md:px-14">
       {/* Left side - Logo */}
       <div className="flex-1 relative">
-        <div className=" flex items-center gap-8 ">
+        <div className=" flex items-center gap-2 sm:gap-8 ">
           <p className="text-3xl font-light tracking-wide">CONVO</p>
           <div className="relative w-46">
             <input
