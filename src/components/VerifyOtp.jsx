@@ -33,7 +33,7 @@ const VerifyOtp = () => {
     return `${m}:${s}`;
   };
 
-  console.log(email);
+//  console.log(email);
   const handleVerifyOtp = async (e) => {
     e.preventDefault();
 
