@@ -62,7 +62,7 @@ export const useChatStore = create((set, get) => ({
         `/message/sendmessage/${selectedUser._id}`,
         messageData
       );
-      await get().getUsers();
+      
 
       set({ messages: [...messages, res.data] });
     } catch (error) {
@@ -82,6 +82,9 @@ export const useChatStore = create((set, get) => ({
 
     socket.on("getOnlineUsers", (userIds) => {
       set({ onlineUsers: userIds });
+    });
+     socket.on("ContactsUpdated", () => {
+      get().getUsers(); // refresh sidebar instantly
     });
   },
   disconnectSocket: () => {
