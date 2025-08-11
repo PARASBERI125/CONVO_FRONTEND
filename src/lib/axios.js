@@ -4,6 +4,6 @@ export const axiosInstance = axios.create({
   baseURL:
     import.meta.env.MODE === "development"
       ? "http://localhost:3000/api"
-      : "https://convo-backend-nkyh.onrender.com/api",
+      : "https://api.convochat.fun/api",
   withCredentials: true,
 });
